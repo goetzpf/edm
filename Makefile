@@ -1,5 +1,5 @@
 # Makefile for edm top level
-TOP = ../..
+TOP = .
 ifdef EPICS_HOST_ARCH
  include $(TOP)/configure/CONFIG
  DIRS += util 
