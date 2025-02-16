@@ -6,7 +6,7 @@ In this branch of EDM, building the application is much simplified.
 
 Configure EPICS_BASE with:
 
-  echo "EPICS_BASE=<location of your epics base]" > configure/RELEASE.local
+  echo "EPICS_BASE=[location of your epics base]" > configure/RELEASE.local
 
 Build with:
 
