@@ -10,7 +10,6 @@ ifdef EPICS_HOST_ARCH
  DIRS += calcPv
  DIRS += locPv
  DIRS += baselib 
- DIRS += edmMain 
  DIRS += giflib 
  DIRS += pnglib 
  DIRS += pvFactory 
@@ -21,6 +20,15 @@ ifdef EPICS_HOST_ARCH
  DIRS += indicator
  DIRS += multiSegRampButton
  DIRS += slaclib
+
+ DIRS+= edmMain
+ edmMain_DEPEND_DIRS += util lib baselib epicsPv logPv proxyPv calcPv locPv giflib
+ edmMain_DEPEND_DIRS += pnglib pvFactory choiceButton videowidget triumflib diamondlib
+ edmMain_DEPEND_DIRS += indicator multiSegRampButton slaclib
+
+ DIRS+= setup
+ setup_DEPEND_DIRS= $(XDIRS) edmMain
+
  include $(TOP)/configure/RULES_DIRS
 
 else
