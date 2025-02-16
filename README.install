@@ -1,5 +1,19 @@
 ###### INSTALLATION NOTES #########
 
+##### HZB branch:
+
+In this branch of EDM, building the application is much simplified.
+
+Configure EPICS_BASE with:
+
+  echo "EPICS_BASE=<location of your epics base]" > configure/RELEASE.local
+
+Build with:
+
+  make -sj
+
+After make, the edm program is in directory bin/linux-x86_64.
+
 ##### EDM Version 1-10-1zd ###########################################
 The Makefile has been modified to be more native for EPICS R3.14 builds.
 The modifications have been made for Linux only.
