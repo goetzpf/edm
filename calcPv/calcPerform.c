@@ -19,6 +19,8 @@
 #include <string.h>
 #include <math.h>
 
+#include <errlog.h>
+
 #include "postfix.h"
 #include "postfixPvt.h"
 
