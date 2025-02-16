@@ -24,17 +24,5 @@ ifdef EPICS_HOST_ARCH
  include $(TOP)/configure/RULES_DIRS
 
 else
-    TOP = ../..
-    ifneq ($(wildcard $(TOP)/config)x,x)
-      # New Makefile.Host config file location
-      include $(TOP)/config/CONFIG_EXTENSIONS
-      DIRS = util lib epicsPv calcPv locPv baselib edmMain giflib pnglib pvFactory choiceButton
-      include $(TOP)/config/RULES_DIRS
-    else
-      # Old Makefile.Unix config file location
-      EPICS=../../..
-      include $(EPICS)/config/CONFIG_EXTENSIONS
-      DIRS = util lib epicsPv calcPv locPv baselib edmMain giflib pnglib pvFactory choiceButton
-      include $(EPICS)/config/RULES_DIRS
-    endif
+  $(error EPICS_HOST_ARCH is not set)
 endif
